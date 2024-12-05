@@ -19,7 +19,23 @@ const navigation = [
   },
   {
     title: "useContext",
-    href: "useContext"
+    href: "useContext",
+  },
+  {
+    title: "useReducer",
+    href: "useReducer",
+  },
+  {
+    title: "useCallback",
+    href: "useCallback",
+  },
+  {
+    title: "customHook",
+    href: "customHook"
+  },
+  {
+    title: "useLayoutEffect",
+    href: "useLayoutEffect",
   }
 ];
 
@@ -27,7 +43,11 @@ export default function Nav() {
   return (
     <nav className="nav">
       {navigation.map((nav) => {
-        return <Link key={nav.title} to={nav.href}>{nav.title}</Link>;
+        return (
+          <Link key={nav.title} to={nav.href}>
+            {nav.title}
+          </Link>
+        );
       })}
     </nav>
   );
